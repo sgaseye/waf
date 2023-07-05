@@ -36,7 +36,14 @@ https://waf.cumulusfire.net/?globalHtml=%20%22%2Bself[%2F*foo*%2F%27alert%27%2F*
 
 
 
+https://github.com/omurugur/SQL_Injection_Payload
 
+https://github.com/0xInfection/Awesome-WAF
+
+https://www.vaadata.com/blog/exploiting-an-sql-injection-with-waf-bypass/
+
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/waf-bypass
+https://www.youtube.com/watch?v=zhkCf8tldbk
 
 
 
